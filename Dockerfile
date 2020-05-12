@@ -11,7 +11,7 @@ RUN apt-get update \
  && update-ca-certificates \
  # Install tools for building
  && toolDeps=" \
-        curl bzip2 \
+        curl bzip2 wget \
     " \
  && apt-get install -y --no-install-recommends --no-install-suggests \
             $toolDeps \
@@ -29,7 +29,6 @@ RUN apt-get update \
          libssl-dev \
          libffi-dev \
          python3-dev \
-         wget \
          gcc \
          g++ \
  && pip install instapy==0.6.8 \
