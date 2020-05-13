@@ -1,3 +1,5 @@
 .env
+.idea/*
+.python-version
 geckodriver.log
 InstaPy/*
