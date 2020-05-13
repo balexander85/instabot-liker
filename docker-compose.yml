@@ -1,7 +1,7 @@
 version: '3'
 services:
   web:
-    image: instabot-liker:latest
+    image: balexander85/instabot-liker:latest
     container_name: "instaliker"
     env_file: .env
     environment:
