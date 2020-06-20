@@ -8,6 +8,4 @@ services:
       - TZ="America/Chicago"
       - PYTHONUNBUFFERED=0
       - INSTAPY_WORKSPACE=/code/InstaPy
-    volumes:
-      - ./:/code
 
