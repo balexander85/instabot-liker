@@ -3,7 +3,7 @@ FROM python:3.7-slim-buster
 ARG geckodriver_ver=0.23.0
 WORKDIR /code/
 
-COPY docker_quickstart.py /code/
+COPY docker_quickstart.py entryfile.sh /code/
 RUN apt-get update \
  && apt-get upgrade -y \
  && apt-get install -y --no-install-recommends --no-install-suggests \
@@ -38,6 +38,4 @@ RUN apt-get update \
             $toolDeps \
  && rm -rf /var/lib/apt/lists/* \
            /tmp/*
-
-CMD ["python", "docker_quickstart.py"]
-
+ENTRYPOINT ./code/entrypoint.sh
